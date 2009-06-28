@@ -28,18 +28,18 @@ The installer adds additional options to your **Optimizer** and **Optimize on...
  
  
 
-![Figure 1. Choosing the optimiser](http://mcraig.net/site/Portals/0/Images/Optimiser.PNG "Figure 1. Choosing the optimiser")
+![Figure 1. Choosing the optimiser](http://i40.tinypic.com/2z3xnyh.png "Figure 1. Choosing the optimiser")
 
  
 
-![Figure 2. Choosing the optimisation type](http://mcraig.net/site/Portals/0/Images/OptimiserType.PNG "Figure 2. Choosing the optimisation type")
+![Figure 2. Choosing the optimisation type](http://i39.tinypic.com/imo080.png "Figure 2. Choosing the optimisation type")
 
  
 Enter other optimisation parameters as normal and click OK. The main MoGo window will appear as shown below:
  
  
 
-![Figure 3. Main window](http://mcraig.net/site/Portals/0/Images/MoGoMain.PNG "Figure 3. Main window")
+![Figure 3. Main window](http://i40.tinypic.com/166lqvk.png "Figure 3. Main window")
 
 ### Maximum generations
 
@@ -122,7 +122,7 @@ While optimising, MoGo displays a small progress dialog (figure 4) showing the c
  
  
 
-![Figure 4. MoGo's progress dialog](http://mcraig.net/site/Portals/0/Images/ProgressDialog.PNG "Figure 4. MoGo's progress dialog")
+![Figure 4. MoGo's progress dialog](http://i42.tinypic.com/33cb21t.png "Figure 4. MoGo's progress dialog")
 
  
  
