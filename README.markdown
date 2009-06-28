@@ -17,14 +17,10 @@ Van Tharp's system quality number optimisation type
 * Saves last-used settings between sessions
 * Honours parameter minimum, maximum, and increment values
 
-
-* * *
-
 ## Install MoGo
 
 [Click here](http://cloud.github.com/downloads/celeretaudax/MoGo/MoGo_v1.1.zip) to install MoGo right away.
 
-* * *
 
 ## Basic Usage
 
