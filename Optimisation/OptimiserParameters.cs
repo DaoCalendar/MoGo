@@ -15,9 +15,6 @@ namespace MoGo.Optimisation
                                    double screeningThreshold, bool exportGenes, int? seed, string fitnessFunction,
                                    int minimumTrades, IEnumerable<string> parameterConditions)
         {
-            Print("===============================================================================");
-            Print("MoGo -- Open Source Genetic Optimizer");
-            Print("===============================================================================");
             MaximumGenerations = generations;
             PopulationSize = populationSize;
             ReproductionRate = reproductionRate;
