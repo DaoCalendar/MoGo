@@ -1,6 +1,8 @@
-# This is an H1
+# MoGo
 
-## MoGo (pronounced mojo) is a free open source genetic optimiser add-on for NinjaTrader. It is generally capable of finding desirable strategy parameter combinations in a small fraction of the time it takes to exhaustively search the parameter space as NinjaTrader's default optimiser does.
+## MoGo (pronounced mojo) is a free open source genetic optimiser add-on for NinjaTrader. 
+
+It is generally capable of finding desirable strategy parameter combinations in a small fraction of the time it takes to exhaustively search the parameter space as NinjaTrader's default optimiser does.
  
 It is a nearly full rewrite of Pete S.'s genetic optimiser (thanks Pete!) with improved GUI and added features, and supports all the original options including:
 Selectable population size, number of generations, top % to reproduce, and mutation rate
@@ -14,6 +16,7 @@ Van Tharp's system quality number optimisation type
 * Detects with high probability when it has exhaused the valid parameter space
 * Saves last-used settings between sessions
 * Honours parameter minimum, maximum, and increment values
+
 
 * * *
 
