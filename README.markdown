@@ -20,24 +20,30 @@ Van Tharp's system quality number optimisation type
 
 * * *
 
+## Install MoGo
+
+[Click here](http://cloud.github.com/downloads/celeretaudax/MoGo/MoGo_v1.1.zip) to install MoGo right away.
+
+* * *
+
 ## Basic Usage
 
 The installer adds additional options to your **Optimizer** and **Optimize on...** settings when configuring an optimisation run in NinaTrader's strategy manager. In order to use MoGo to optimise your strategies, select the MoGo optimiser (figure 1 below) and MoGo optimisation type (figure 2).
  
  
 
-![Figure 1. Choosing the optimiser](http://mcraig.net/site/Portals/0/Images/Optimiser.PNG)
+![Figure 1. Choosing the optimiser](http://mcraig.net/site/Portals/0/Images/Optimiser.PNG "Figure 1. Choosing the optimiser")
 
  
 
-![Figure 2. Choosing the optimisation type](http://mcraig.net/site/Portals/0/Images/OptimiserType.PNG)
+![Figure 2. Choosing the optimisation type](http://mcraig.net/site/Portals/0/Images/OptimiserType.PNG "Figure 2. Choosing the optimisation type")
 
  
 Enter other optimisation parameters as normal and click OK. The main MoGo window will appear as shown below:
  
  
 
-![Figure 3. Main window](http://mcraig.net/site/Portals/0/Images/MoGoMain.PNG)
+![Figure 3. Main window](http://mcraig.net/site/Portals/0/Images/MoGoMain.PNG "Figure 3. Main window")
 
 ### Maximum generations
 
@@ -120,7 +126,7 @@ While optimising, MoGo displays a small progress dialog (figure 4) showing the c
  
  
 
-![Figure 4. MoGo's progress dialog](http://mcraig.net/site/Portals/0/Images/ProgressDialog.PNG)
+![Figure 4. MoGo's progress dialog](http://mcraig.net/site/Portals/0/Images/ProgressDialog.PNG "Figure 4. MoGo's progress dialog")
 
  
  
