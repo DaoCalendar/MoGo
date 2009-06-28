@@ -1,0 +1,4 @@
+C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.UI.ParametersForm.resources
+C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.UI.ProgressForm.resources
+C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.csproj.GenerateResource.Cache

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DABA6BD-9DC5-4456-B69B-CD98DA049848}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoGo</RootNamespace>
+    <AssemblyName>MoGo</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Documents and Settings\Matt\My Documents\NinjaTrader 6.5\bin\Custom\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\Documents and Settings\Matt\My Documents\NinjaTrader 6.5\bin\Custom\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NinjaTrader.Core, Version=6.5.1000.11, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\NinjaTrader 6.5\bin\NinjaTrader.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WilsonORMapper, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\NinjaTrader 6.5\bin\WilsonORMapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChromosomeTypes\BaseChromosomeType.cs" />
+    <Compile Include="ChromosomeTypes\BooleanChromosomeType.cs" />
+    <Compile Include="ChromosomeTypes\DoubleChromosomeType.cs" />
+    <Compile Include="ChromosomeTypes\EnumChromosomeType.cs" />
+    <Compile Include="ChromosomeTypes\IntegerChromosomeType.cs" />
+    <Compile Include="NinjaTrader\FitnessEvaluator.cs" />
+    <Compile Include="NinjaTrader\FitnessFunctionWrapper.cs" />
+    <Compile Include="Optimisation\GenerationCompleteEventArgs.cs" />
+    <Compile Include="Optimisation\IFitnessEvaluator.cs" />
+    <Compile Include="Optimisation\IterationCompleteEventArgs.cs" />
+    <Compile Include="Optimisation\Optimiser.cs" />
+    <Compile Include="UI\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="World\CompositeGeneValidator.cs" />
+    <Compile Include="World\Evolver.cs" />
+    <Compile Include="NinjaTrader\MoGoNT.cs">
+    </Compile>
+    <Compile Include="World\Gene.cs" />
+    <Compile Include="NinjaTrader\StrategyChromosomeTypeFactory.cs" />
+    <Compile Include="Optimisation\OptimiserParameters.cs" />
+    <Compile Include="UI\ParameterEventArgs.cs" />
+    <Compile Include="UI\ParametersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ParametersForm.Designer.cs">
+      <DependentUpon>ParametersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NinjaTrader\ParameterWriter.cs" />
+    <Compile Include="Optimisation\GeneScore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NinjaTrader\OptimisationMeasures\Sqn.cs" />
+    <Compile Include="World\GeneValidatorFactory.cs" />
+    <Compile Include="World\IGeneValidator.cs" />
+    <Compile Include="World\OnceOnlyGeneValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\ParametersForm.resx">
+      <DependentUpon>ParametersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MoGo small.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
