@@ -27,12 +27,13 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Documents and Settings\Matt\My Documents\NinjaTrader 6.5\bin\Custom\</OutputPath>
+    <OutputPath>..\..\..\..\..\Documents and Settings\Zach\My Documents\NinjaTrader 6.5\bin\Custom\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,7 +49,7 @@
   <ItemGroup>
     <Reference Include="NinjaTrader.Core, Version=6.5.1000.11, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\NinjaTrader 6.5\bin\NinjaTrader.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\NinjaTrader 6.5\bin\NinjaTrader.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL">
@@ -62,7 +63,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="WilsonORMapper, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\NinjaTrader 6.5\bin\WilsonORMapper.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\NinjaTrader 6.5\bin\WilsonORMapper.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -78,10 +79,15 @@
     <Compile Include="Optimisation\IFitnessEvaluator.cs" />
     <Compile Include="Optimisation\IterationCompleteEventArgs.cs" />
     <Compile Include="Optimisation\Optimiser.cs" />
-    <Compile Include="UI\ProgressForm.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="World\ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ProgressForm.Designer.cs">
+    <Compile Include="World\ProgressForm.Designer.cs">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="World\CompositeGeneValidator.cs" />
@@ -111,13 +117,20 @@
       <DependentUpon>ParametersForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ProgressForm.resx">
+    <EmbeddedResource Include="World\ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MoGo small.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

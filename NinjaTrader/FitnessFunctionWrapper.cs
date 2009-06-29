@@ -14,6 +14,7 @@ namespace NinjaTrader.Strategy
     {
         private static double _lastPerformanceValue;
         private static double _minimumTrades;
+        private static double _maximumTrades;
         private static OptimizationType _optimisationType;
 
         public static double LastPerformanceValue
@@ -42,6 +43,7 @@ namespace NinjaTrader.Strategy
         public static void Initialise(OptimiserParameters optimiserParameters, StrategyBase strategy)
         {
             _minimumTrades = optimiserParameters.MinimumTrades;
+            _maximumTrades = optimiserParameters.MaximumTrades;
 
             _optimisationType =
                 (OptimizationType) Activator.CreateInstance(Type.GetType(optimiserParameters.FitnessFunctionType));
@@ -58,7 +60,7 @@ namespace NinjaTrader.Strategy
         {
             var performanceValue = double.MinValue;
 
-            if (systemPerformance.AllTrades.Count >= _minimumTrades)
+            if (systemPerformance.AllTrades.Count >= _minimumTrades && systemPerformance.AllTrades.Count <= _maximumTrades)
             {
                 performanceValue = _optimisationType.GetPerformanceValue(systemPerformance);
             }

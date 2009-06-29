@@ -51,7 +51,7 @@ namespace MoGo.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.screenThresholdSpin = new System.Windows.Forms.NumericUpDown();
             this.mutationRateSpin = new System.Windows.Forms.NumericUpDown();
@@ -75,6 +75,8 @@ namespace MoGo.UI
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.fitnessFunctionComboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.maximumTradesSpin = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenThresholdSpin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mutationRateSpin)).BeginInit();
@@ -85,6 +87,7 @@ namespace MoGo.UI
             ((System.ComponentModel.ISupportInitialize)(this.strategyParameterConditionsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimumTradesSpin)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maximumTradesSpin)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -286,8 +289,8 @@ namespace MoGo.UI
             // 
             // strategyParameterConditionsGrid
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.strategyParameterConditionsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.strategyParameterConditionsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.strategyParameterConditionsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.strategyParameterConditionsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.strategyParameterConditionsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -361,13 +364,15 @@ namespace MoGo.UI
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.maximumTradesSpin);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.minimumTradesSpin);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.fitnessFunctionComboBox);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Location = new System.Drawing.Point(18, 206);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 102);
+            this.groupBox3.Size = new System.Drawing.Size(257, 129);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fitness function";
@@ -389,6 +394,37 @@ namespace MoGo.UI
             this.label11.TabIndex = 5;
             this.label11.Text = "Fitness function";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // maximumTradesSpin
+            // 
+            this.maximumTradesSpin.Location = new System.Drawing.Point(181, 93);
+            this.maximumTradesSpin.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.maximumTradesSpin.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.maximumTradesSpin.Name = "maximumTradesSpin";
+            this.maximumTradesSpin.Size = new System.Drawing.Size(60, 20);
+            this.maximumTradesSpin.TabIndex = 12;
+            this.maximumTradesSpin.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(0, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(172, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Maximum Trades";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ParametersForm
             // 
@@ -418,6 +454,7 @@ namespace MoGo.UI
             ((System.ComponentModel.ISupportInitialize)(this.strategyParameterConditionsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimumTradesSpin)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.maximumTradesSpin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +474,7 @@ namespace MoGo.UI
         private DataGridView strategyParameterConditionsGrid;
         private Label errorLabel;
         private DataGridViewTextBoxColumn Condition;
+        private NumericUpDown maximumTradesSpin;
+        private Label label7;
     }
 }

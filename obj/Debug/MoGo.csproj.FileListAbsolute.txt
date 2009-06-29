@@ -2,3 +2,10 @@ C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.UI.ParametersForm.resources
 C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.UI.ProgressForm.resources
 C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.csproj.GenerateResource.Cache
+C:\Documents and Settings\Matt\My Documents\NinjaTrader 6.5\bin\Custom\MoGo.dll
+C:\Documents and Settings\Matt\My Documents\NinjaTrader 6.5\bin\Custom\MoGo.pdb
+C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.dll
+C:\Users\Zach\Documents\Projects\MoGo\obj\Debug\MoGo.pdb
+C:\Documents and Settings\Zach\My Documents\NinjaTrader 6.5\bin\Custom\MoGo.dll
+C:\Documents and Settings\Zach\My Documents\NinjaTrader 6.5\bin\Custom\MoGo.pdb
+C:\Documents and Settings\Zach\My Documents\NinjaTrader 6.5\bin\Custom\MoGo.dll.config

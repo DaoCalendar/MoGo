@@ -151,12 +151,13 @@ namespace MoGo.UI
                                            (double) mutationRateSpin.Value / 100, (double) screenThresholdSpin.Value,
                                            saveLogCheckbox.Checked, null,
                                            ((Type) fitnessFunctionComboBox.SelectedValue).AssemblyQualifiedName,
-                                           (int) minimumTradesSpin.Value, conditions);
+                                           (int) minimumTradesSpin.Value,
+                                           (int) maximumTradesSpin.Value, conditions);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("http://mcraig.net/site/Development/NinjaTrader/MoGo/tabid/59/Default.aspx");
+            Process.Start("http://github.com/zkwentz/MoGo/tree/master");
         }
 
         private void ParametersForm_Load(object sender, EventArgs e)

@@ -81,6 +81,10 @@ Specifies the minimum number of trades that must occur using an individual's par
  
 Setting this too low increases the likelihood of curve-fitting, while setting it too high is likely to remove fit individuals from the gene pool. Reasonable values depend on the length of your backtest and time frame of your strategy; I wouldn't use anything under 50 myself.
  
+### Maximum trades
+
+Specifies the maximum number of trades that can occur using an individual's parameter settings in order for that individual to be considered viable.
+
 ##Strategy parameter constraints grid
 
 Here you may enter any number of additional dynamic constraints on your strategy parameters using one C# boolean expressions per grid line. MoGo will then avoid creating individuals that violate any of the specified constraints.

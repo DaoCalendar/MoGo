@@ -184,7 +184,7 @@ namespace NinjaTrader.Strategy
 
             if (parameters == null)
             {
-                parameters = new OptimiserParameters(5, 256, 0.1, 0.05, 0, false, null, string.Empty, 50,
+                parameters = new OptimiserParameters(5, 256, 0.1, 0.05, 0, false, null, string.Empty, 50, 1000,
                                                      new List<string>());
             }
 

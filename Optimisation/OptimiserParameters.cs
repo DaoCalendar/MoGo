@@ -13,7 +13,7 @@ namespace MoGo.Optimisation
 
         public OptimiserParameters(int generations, int populationSize, double reproductionRate, double mutationRate,
                                    double screeningThreshold, bool exportGenes, int? seed, string fitnessFunction,
-                                   int minimumTrades, IEnumerable<string> parameterConditions)
+                                   int minimumTrades, int maximumTrades, IEnumerable<string> parameterConditions)
         {
             MaximumGenerations = generations;
             PopulationSize = populationSize;
@@ -24,6 +24,7 @@ namespace MoGo.Optimisation
             Seed = seed;
 
             MinimumTrades = minimumTrades;
+            MaximumTrades = maximumTrades;
             FitnessFunctionType = fitnessFunction;
 
             ParameterConditions = new List<string>(parameterConditions).ToArray();
@@ -46,6 +47,8 @@ namespace MoGo.Optimisation
         public string FitnessFunctionType { get; set; }
 
         public int MinimumTrades { get; set; }
+
+        public int MaximumTrades { get; set; }
 
         [XmlArray]
         public string[] ParameterConditions { get; set; }
