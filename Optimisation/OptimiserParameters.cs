@@ -13,9 +13,11 @@ namespace MoGo.Optimisation
 
         public OptimiserParameters(int generations, int populationSize, double reproductionRate, double mutationRate,
                                    double screeningThreshold, bool exportGenes, int? seed, string fitnessFunction,
-                                   int minimumTrades, int maximumTrades, IEnumerable<string> parameterConditions)
+                                   int minimumTrades, int maximumTrades, bool tradingFutures, int contracts, IEnumerable<string> parameterConditions)
         {
             MaximumGenerations = generations;
+            TradingFutures = tradingFutures;
+            Contracts = contracts;
             PopulationSize = populationSize;
             ReproductionRate = reproductionRate;
             MutationRate = mutationRate;
@@ -31,6 +33,10 @@ namespace MoGo.Optimisation
         }
 
         public int MaximumGenerations { get; set; }
+
+        public bool TradingFutures { get; set; }
+
+        public int Contracts { get; set; }
 
         public double MutationRate { get; set; }
 

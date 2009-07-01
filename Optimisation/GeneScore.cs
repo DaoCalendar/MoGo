@@ -1,5 +1,6 @@
 ﻿using System;
 using MoGo.World;
+using NinjaTrader.Strategy;
 
 namespace MoGo.Optimisation
 {
@@ -7,11 +8,13 @@ namespace MoGo.Optimisation
     {
         private readonly double _fitness;
         private readonly Gene _gene;
+        private readonly SystemPerformance _performance;
 
-        public GeneScore(Gene gene, double fitness)
+        public GeneScore(Gene gene, double fitness, SystemPerformance performance)
         {
             _gene = gene;
             _fitness = fitness;
+            _performance = performance;
         }
 
         public Gene Gene
@@ -23,6 +26,12 @@ namespace MoGo.Optimisation
         {
             get { return _fitness; }
         }
+
+        public SystemPerformance performance
+        {
+            get { return _performance; }
+        }
+
 
 
         #region IComparable<GeneScore> Members

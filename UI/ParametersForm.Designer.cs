@@ -13,7 +13,7 @@ namespace MoGo.UI
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private IContainer components;
+        private IContainer components;//something might have happened here to have caused a problem
 
         private GroupBox groupBox1;
         private GroupBox groupBox2;
@@ -24,7 +24,7 @@ namespace MoGo.UI
         private Label label5;
         private LinkLabel linkLabel1;
         private NumericUpDown generationsSpin;
-        private CheckBox saveLogCheckbox;
+        private CheckBox tradingFuturesCheckbox;
 
         /* CODE FROM DESIGNER: SECTION 2
          *
@@ -51,8 +51,9 @@ namespace MoGo.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.saveLogCheckbox = new System.Windows.Forms.CheckBox();
             this.screenThresholdSpin = new System.Windows.Forms.NumericUpDown();
             this.mutationRateSpin = new System.Windows.Forms.NumericUpDown();
             this.reproductionPercentSpin = new System.Windows.Forms.NumericUpDown();
@@ -60,10 +61,10 @@ namespace MoGo.UI
             this.label5 = new System.Windows.Forms.Label();
             this.generationsSpin = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.saveLogCheckbox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tradingFuturesCheckbox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.errorLabel = new System.Windows.Forms.Label();
             this.strategyParameterConditionsGrid = new System.Windows.Forms.DataGridView();
@@ -73,10 +74,13 @@ namespace MoGo.UI
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnOk = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.fitnessFunctionComboBox = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.maximumTradesSpin = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.fitnessFunctionComboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.contractsSpinner = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenThresholdSpin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mutationRateSpin)).BeginInit();
@@ -88,10 +92,13 @@ namespace MoGo.UI
             ((System.ComponentModel.ISupportInitialize)(this.minimumTradesSpin)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximumTradesSpin)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contractsSpinner)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.saveLogCheckbox);
             this.groupBox1.Controls.Add(this.screenThresholdSpin);
             this.groupBox1.Controls.Add(this.mutationRateSpin);
             this.groupBox1.Controls.Add(this.reproductionPercentSpin);
@@ -99,7 +106,6 @@ namespace MoGo.UI
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.generationsSpin);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.saveLogCheckbox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -109,6 +115,17 @@ namespace MoGo.UI
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Genetic optimiser";
+            // 
+            // saveLogCheckbox
+            // 
+            this.saveLogCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saveLogCheckbox.Location = new System.Drawing.Point(133, 148);
+            this.saveLogCheckbox.Name = "saveLogCheckbox";
+            this.saveLogCheckbox.Size = new System.Drawing.Size(108, 17);
+            this.saveLogCheckbox.TabIndex = 13;
+            this.saveLogCheckbox.Text = "Save All Trials";
+            this.saveLogCheckbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.saveLogCheckbox.UseVisualStyleBackColor = true;
             // 
             // screenThresholdSpin
             // 
@@ -227,17 +244,6 @@ namespace MoGo.UI
             this.label6.Text = "Mutation rate (%)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // saveLogCheckbox
-            // 
-            this.saveLogCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saveLogCheckbox.Location = new System.Drawing.Point(98, 153);
-            this.saveLogCheckbox.Name = "saveLogCheckbox";
-            this.saveLogCheckbox.Size = new System.Drawing.Size(97, 17);
-            this.saveLogCheckbox.TabIndex = 6;
-            this.saveLogCheckbox.Text = "Save all trials";
-            this.saveLogCheckbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.saveLogCheckbox.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(1, 72);
@@ -265,13 +271,25 @@ namespace MoGo.UI
             this.label1.Text = "Maximum generations";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tradingFuturesCheckbox
+            // 
+            this.tradingFuturesCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tradingFuturesCheckbox.Location = new System.Drawing.Point(19, 22);
+            this.tradingFuturesCheckbox.Name = "tradingFuturesCheckbox";
+            this.tradingFuturesCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tradingFuturesCheckbox.Size = new System.Drawing.Size(108, 17);
+            this.tradingFuturesCheckbox.TabIndex = 6;
+            this.tradingFuturesCheckbox.Text = "Trading Futures";
+            this.tradingFuturesCheckbox.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tradingFuturesCheckbox.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.errorLabel);
             this.groupBox2.Controls.Add(this.strategyParameterConditionsGrid);
             this.groupBox2.Location = new System.Drawing.Point(290, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 292);
+            this.groupBox2.Size = new System.Drawing.Size(345, 184);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Strategy parameter constraints";
@@ -289,8 +307,8 @@ namespace MoGo.UI
             // 
             // strategyParameterConditionsGrid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.strategyParameterConditionsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.strategyParameterConditionsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.strategyParameterConditionsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.strategyParameterConditionsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.strategyParameterConditionsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -300,7 +318,7 @@ namespace MoGo.UI
             this.strategyParameterConditionsGrid.Name = "strategyParameterConditionsGrid";
             this.strategyParameterConditionsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.strategyParameterConditionsGrid.RowHeadersWidth = 30;
-            this.strategyParameterConditionsGrid.Size = new System.Drawing.Size(307, 239);
+            this.strategyParameterConditionsGrid.Size = new System.Drawing.Size(307, 156);
             this.strategyParameterConditionsGrid.TabIndex = 0;
             // 
             // Condition
@@ -343,7 +361,7 @@ namespace MoGo.UI
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.Location = new System.Drawing.Point(537, 322);
+            this.linkLabel1.Location = new System.Drawing.Point(546, 368);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(89, 13);
             this.linkLabel1.TabIndex = 2;
@@ -354,7 +372,7 @@ namespace MoGo.UI
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(290, 319);
+            this.btnOk.Location = new System.Drawing.Point(290, 363);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 3;
@@ -376,24 +394,6 @@ namespace MoGo.UI
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fitness function";
-            // 
-            // fitnessFunctionComboBox
-            // 
-            this.fitnessFunctionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.fitnessFunctionComboBox.FormattingEnabled = true;
-            this.fitnessFunctionComboBox.Location = new System.Drawing.Point(17, 38);
-            this.fitnessFunctionComboBox.Name = "fitnessFunctionComboBox";
-            this.fitnessFunctionComboBox.Size = new System.Drawing.Size(224, 21);
-            this.fitnessFunctionComboBox.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(14, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Fitness function";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // maximumTradesSpin
             // 
@@ -426,12 +426,71 @@ namespace MoGo.UI
             this.label7.Text = "Maximum Trades";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // fitnessFunctionComboBox
+            // 
+            this.fitnessFunctionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.fitnessFunctionComboBox.FormattingEnabled = true;
+            this.fitnessFunctionComboBox.Location = new System.Drawing.Point(17, 38);
+            this.fitnessFunctionComboBox.Name = "fitnessFunctionComboBox";
+            this.fitnessFunctionComboBox.Size = new System.Drawing.Size(224, 21);
+            this.fitnessFunctionComboBox.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(14, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Fitness function";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.contractsSpinner);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.tradingFuturesCheckbox);
+            this.groupBox4.Location = new System.Drawing.Point(290, 206);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(345, 129);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Trading Futures";
+            // 
+            // contractsSpinner
+            // 
+            this.contractsSpinner.Location = new System.Drawing.Point(19, 48);
+            this.contractsSpinner.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.contractsSpinner.Name = "contractsSpinner";
+            this.contractsSpinner.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.contractsSpinner.Size = new System.Drawing.Size(60, 20);
+            this.contractsSpinner.TabIndex = 12;
+            this.contractsSpinner.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(85, 50);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(172, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Contracts Per Year";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ParametersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 352);
+            this.ClientSize = new System.Drawing.Size(652, 398);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox2);
@@ -440,7 +499,7 @@ namespace MoGo.UI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ParametersForm";
             this.ShowInTaskbar = false;
-            this.Text = "- MoGo - 1.1";
+            this.Text = "- MoGo - 1.3";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ParametersForm_Load);
             this.groupBox1.ResumeLayout(false);
@@ -455,6 +514,8 @@ namespace MoGo.UI
             ((System.ComponentModel.ISupportInitialize)(this.minimumTradesSpin)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maximumTradesSpin)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.contractsSpinner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,5 +537,9 @@ namespace MoGo.UI
         private DataGridViewTextBoxColumn Condition;
         private NumericUpDown maximumTradesSpin;
         private Label label7;
+        private GroupBox groupBox4;
+        private NumericUpDown contractsSpinner;
+        private Label label8;
+        private CheckBox saveLogCheckbox;
     }
 }

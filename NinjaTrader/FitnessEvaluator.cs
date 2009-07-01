@@ -37,7 +37,7 @@ namespace MoGo.NinjaTrader
 
             _strategy.RunIteration();
 
-            return new GeneScore(gene, FitnessFunctionWrapper.LastPerformanceValue);
+            return new GeneScore(gene, FitnessFunctionWrapper.LastPerformanceValue, _strategy.Performance);
         }
 
         #endregion

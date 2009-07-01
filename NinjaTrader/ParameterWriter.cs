@@ -4,7 +4,7 @@ using System.IO;
 using MoGo.ChromosomeTypes;
 using MoGo.World;
 using NinjaTrader.Cbi;
-using NinjaTrader.Strategy;
+//using NinjaTrader.Strategy;
 
 namespace MoGo.NinjaTrader
 {
@@ -38,25 +38,39 @@ namespace MoGo.NinjaTrader
         public void WriteParameterNames(IList<BaseChromosomeType> chromosomeTypes)
         {
             Write("Iteration,");
+            WriteLine("Fitness,");
+            WriteLine("Net Profit,");
+            WriteLine("Sharpe Ratio,");
+            WriteLine("Total Trades,");
+            WriteLine("Trades Per Day,");
+            WriteLine("Avg. Profit,");
+            WriteLine("Max Drawdown,");
 
             foreach (var chromosomeType in chromosomeTypes)
             {
                 Write(chromosomeType.Name + ",");
             }
 
-            WriteLine("Fitness");
         }
 
-        public void WriteParamValues(int iteration, double fitness, Gene gene)
+        public void WriteParamValues(int iteration, double fitness, Gene gene, double cumProfit, double drawDown, double sharpeRatio, double tradesPerDay, int totalTrades, double avgProfit)
         {
             Write(iteration + ",");
+            WriteLine(fitness.ToString("N3") + ",");
+            WriteLine(cumProfit.ToString("C") + ",");
+            WriteLine(sharpeRatio.ToString("N2") + ",");
+            WriteLine(totalTrades.ToString() + ",");
+            WriteLine(tradesPerDay.ToString("N2") + ",");
+            WriteLine(avgProfit.ToString("C") + ",");
+            WriteLine(drawDown.ToString("C") + ",");
+
+
 
             for (var index = 0; index < gene.Chromosomes.Count; index++)
             {
                 Write(gene.Chromosomes[index] + ",");
             }
 
-            WriteLine(fitness.ToString("N3"));
         }
 
         public void WriteLine(string s)

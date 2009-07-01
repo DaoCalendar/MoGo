@@ -37,6 +37,8 @@ namespace MoGo.UI
 
             screenThresholdSpin.Value = (decimal) parameters.ScreeningThreshold;
             saveLogCheckbox.Checked = parameters.ExportGenes;
+            tradingFuturesCheckbox.Checked = parameters.TradingFutures;
+            contractsSpinner.Value = parameters.Contracts;
 
             var wrappers = GetOptimisationTypeWrappers();
 
@@ -149,10 +151,13 @@ namespace MoGo.UI
             return new OptimiserParameters((int) generationsSpin.Value, (int) populationSizeSpin.Value,
                                            (double) reproductionPercentSpin.Value / 100,
                                            (double) mutationRateSpin.Value / 100, (double) screenThresholdSpin.Value,
-                                           saveLogCheckbox.Checked, null,
+                                           tradingFuturesCheckbox.Checked, null,
                                            ((Type) fitnessFunctionComboBox.SelectedValue).AssemblyQualifiedName,
                                            (int) minimumTradesSpin.Value,
-                                           (int) maximumTradesSpin.Value, conditions);
+                                           (int) maximumTradesSpin.Value, 
+                                           (bool) tradingFuturesCheckbox.Checked,
+                                           (int) contractsSpinner.Value,
+                                           conditions);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

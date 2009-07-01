@@ -106,7 +106,13 @@ namespace NinjaTrader.Strategy
             _iterationNumber = args.IterationNumber;
 
             args.Stop = UserAbort;
-            _parameterWriter.WriteParamValues(args.IterationNumber, args.Score.Fitness, args.Score.Gene);
+            _parameterWriter.WriteParamValues(args.IterationNumber, args.Score.Fitness, args.Score.Gene,
+                args.Score.performance.AllTrades.TradesPerformance.Currency.CumProfit,
+                args.Score.performance.AllTrades.TradesPerformance.Currency.DrawDown,
+                args.Score.performance.AllTrades.TradesPerformance.SharpeRatio,
+                args.Score.performance.AllTrades.TradesPerformance.TradesPerDay,
+                args.Score.performance.AllTrades.TradesPerformance.TradesCount,
+                args.Score.performance.AllTrades.TradesPerformance.Currency.AvgProfit);
 
             if (__lastParameters.ScreeningThreshold > 0 && args.Score.Fitness > __lastParameters.ScreeningThreshold)
             {
@@ -184,7 +190,7 @@ namespace NinjaTrader.Strategy
 
             if (parameters == null)
             {
-                parameters = new OptimiserParameters(5, 256, 0.1, 0.05, 0, false, null, string.Empty, 50, 1000,
+                parameters = new OptimiserParameters(5, 256, 0.1, 0.05, 0, false, null, string.Empty, 50, 1000, false, 1,
                                                      new List<string>());
             }
 
